@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "extensionId": "org.fleet.nfo",
+  "pages": [
+    {
+      "id": "nfo",
+      "title": "NFO",
+      "route": "/ext/org.fleet.nfo/nfo"
+    }
+  ],
+  "actions": [
+    {
+      "id": "view-nfo",
+      "label": "View NFO",
+      "target": "selection",
+      "primary": true
+    }
+  ],
+  "panels": [
+    {
+      "id": "nfo",
+      "title": "NFO",
+      "placement": "settings"
+    }
+  ],
+  "forms": [
+    {
+      "id": "nfo-settings",
+      "title": "NFO — scan limits",
+      "fields": [
+        {
+          "name": "maxDepth",
+          "label": "Max scan depth",
+          "kind": "number",
+          "required": true
+        },
+        {
+          "name": "maxFiles",
+          "label": "Max NFO files to list",
+          "kind": "number",
+          "required": true,
+          "advanced": true
+        }
+      ],
+      "description": "Adjust NFO — scan limits — essentials first, extras under More options."
+    },
+    {
+      "id": "nfo-view",
+      "title": "Find / view NFO",
+      "fields": [
+        {
+          "name": "hash",
+          "label": "Torrent hash",
+          "kind": "text",
+          "placeholder": "infohash…"
+        },
+        {
+          "name": "path",
+          "label": "Absolute .nfo path (optional if hash set)",
+          "kind": "text",
+          "placeholder": "/data/downloads"
+        }
+      ],
+      "description": "Find and display NFO text bundled with a release."
+    }
+  ]
+}
